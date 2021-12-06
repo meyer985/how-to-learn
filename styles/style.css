@@ -28,7 +28,6 @@
   padding-left: 64px;
   align-items: center;
   position: relative;
-  z-index: -2;
   overflow: hidden;
 }
 
@@ -58,7 +57,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: 2;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -68,7 +67,7 @@
   position: absolute;
   right: 0;
   top: 64px;
-  z-index: -2;
+  z-index: 1;
   background-color: #2f80ed;
 }
 
@@ -291,7 +290,6 @@ text-align: center;
   align-items: center;
   position: relative;
   background-color: #f2f2f2;
-  z-index: -2;
   padding-top: 100px;
 }
 
@@ -302,6 +300,7 @@ text-align: center;
   font-size: 120px;
   font-weight: bold;
   text-align: center;
+  z-index: 1;
 }
 
 .feynman__subtitle {
@@ -310,6 +309,7 @@ text-align: center;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  z-index: 1;
 }
 
 .feynman__link {
@@ -330,7 +330,73 @@ text-align: center;
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: -1;
+}
+
+.khan {
+  background-color: #f2f2f2;
+  padding-top: 105px;
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.khan__author {
+  line-height: 42px;
+  font-size: 30px;
+  margin: 0;
+}
+
+.khan__title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.khan__quote {
+  line-height: 34px;
+  font-size: 24px;
+  width: 790px;
+  margin-top: 50px;
+  margin-bottom: 36px;
+}
+
+.khan__quote-author {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.khan__quote-author-subline {
+  line-height: 1.15;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 68px;
+}
+
+.khan__book-container {
+  display: flex;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  object-fit: cover;
+  object-position: left top;
+  margin-right: 48px;
+}
+
+.khan__buy-link {
+  text-decoration: none;
+  color:  #2f80ed;
+  line-height: 42px;
+  font-size: 30px;
+  margin: 0;
 }
 
 .kaufman {
@@ -340,7 +406,6 @@ text-align: center;
   flex-direction: column;
   align-items: center;
   background-color:  #1f1f1f;
-  z-index: -2;
   position: relative;
   overflow: hidden;
 }
@@ -353,6 +418,26 @@ text-align: center;
   position: absolute;
   right: -210px;
   top: 0;
+}
+
+.resources {
+  padding-top: 100px;
+  padding-bottom: 217px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resources__logo-zone {
+  margin: 80px auto 0;
+  width: 1100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
 }
 
 .footer {
@@ -435,5 +520,12 @@ background-position: center;
 
 .logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
+}
 
+.link {
+  transition: 0.2s linear
+}
+
+.link:hover {
+  opacity: 50%;
 }
